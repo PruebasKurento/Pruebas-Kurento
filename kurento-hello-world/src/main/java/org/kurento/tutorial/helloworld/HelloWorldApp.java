@@ -36,10 +36,6 @@ public class HelloWorldApp implements WebSocketConfigurer {
 
 	final static String DEFAULT_KMS_WS_URI = "ws://localhost:8888/kurento";
 
-	@Bean
-	public HelloWorldHandler handler() {
-		return new HelloWorldHandler();
-	}
 
 	@Bean
 	public KurentoClient kurentoClient() {
