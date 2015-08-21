@@ -61,24 +61,24 @@ public class CallMediaPipeline {
 		String appServerUrl = System.getProperty("app.server.url",
 				One2OneCallAdvApp.DEFAULT_APP_SERVER_URL);
 		
-		/*FaceOverlayFilter faceOverlayFilterCaller = new FaceOverlayFilter.Builder(
-				pipeline).build();
-		faceOverlayFilterCaller.setOverlayedImage(appServerUrl
-				+ "/img/mario-wings.png", -0.35F, -1.2F, 1.6F, 1.6F);
+//		FaceOverlayFilter faceOverlayFilterCaller = new FaceOverlayFilter.Builder(
+//				pipeline).build();
+//		faceOverlayFilterCaller.setOverlayedImage(appServerUrl
+//				+ "/img/mario-wings.png", -0.35F, -1.2F, 1.6F, 1.6F);
 
-		FaceOverlayFilter faceOverlayFilterCallee = new FaceOverlayFilter.Builder(
-				pipeline).build();
-		faceOverlayFilterCallee.setOverlayedImage(
-				appServerUrl + "/img/Hat.png", -0.2F, -1.35F, 1.5F, 1.5F);
-				*/
+//		FaceOverlayFilter faceOverlayFilterCallee = new FaceOverlayFilter.Builder(
+//				pipeline).build();
+//		faceOverlayFilterCallee.setOverlayedImage(
+//				appServerUrl + "/img/Hat.png", -0.2F, -1.35F, 1.5F, 1.5F);
+				
 		// Connections
-/*		webRtcCaller.connect(faceOverlayFilterCaller);
+		webRtcCaller.connect(faceOverlayFilterCaller);
 		faceOverlayFilterCaller.connect(webRtcCallee);
 		faceOverlayFilterCaller.connect(recorderCaller);
 
 		webRtcCallee.connect(faceOverlayFilterCallee);
 		faceOverlayFilterCallee.connect(webRtcCaller);
-		faceOverlayFilterCallee.connect(recorderCallee);*/
+		faceOverlayFilterCallee.connect(recorderCallee);
 	}
 
 	public void record() {
