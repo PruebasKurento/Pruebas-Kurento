@@ -64,10 +64,10 @@ public class CallHandler extends TextWebSocketHandler {
 		UserSession user = registry.getBySession(session);
 
 		if (user != null) {
-			log.debug("Incoming message from user '{}': {}", user.getName(),
+			log.debug("Mensaje entrante del usuario '{}': {}", user.getName(),
 					jsonMessage);
 		} else {
-			log.debug("Incoming message from new user: {}", jsonMessage);
+			log.debug("Mensaje entrante de un NUEVO usuarior: {}", jsonMessage);
 		}
 
 		switch (jsonMessage.get("id").getAsString()) {
@@ -110,9 +110,9 @@ public class CallHandler extends TextWebSocketHandler {
 		String name = jsonMessage.getAsJsonPrimitive("name").getAsString();
 
 		UserSession caller = new UserSession(session, name);
-		String responseMsg = "accepted";
+		String responseMsg = "accepted -> OK";
 		if (name.isEmpty()) {
-			responseMsg = "rejected: empty user name";
+			responseMsg = "rejected: Nombre de usuario Vacio";
 		} else if (registry.exists(name)) {
 			responseMsg = "rejected: user '" + name + "' already registered";
 		} else {
@@ -160,7 +160,7 @@ public class CallHandler extends TextWebSocketHandler {
 		String to = calleer.getCallingTo();
 
 		if ("accept".equals(callResponse)) {
-			log.debug("Accepted call from '{}' to '{}'", from, to);
+			log.debug("Llamada aceptada de '{}' a '{}'", from, to);
 
 			CallMediaPipeline callMediaPipeline = new CallMediaPipeline(
 					kurento, from, to);
@@ -288,7 +288,7 @@ public class CallHandler extends TextWebSocketHandler {
 	private void play(final UserSession session, JsonObject jsonMessage)
 			throws IOException {
 		String user = jsonMessage.get("user").getAsString();
-		log.debug("Playing recorded call of user '{}'", user);
+		log.debug("Monstrando la llamada grabada del usuario '{}'", user);
 
 		JsonObject response = new JsonObject();
 		response.addProperty("id", "playResponse");
