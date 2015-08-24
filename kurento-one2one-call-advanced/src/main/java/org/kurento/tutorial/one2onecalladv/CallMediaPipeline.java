@@ -73,7 +73,7 @@ public class CallMediaPipeline {
 				
 		// Connections
 		webRtcCaller.connect(webRtcCallee);
-		webRtcCaller.connect/recorderCaller);
+		webRtcCaller.connect(recorderCaller);
 	//	webRtcCaller.connect(faceOverlayFilterCaller);
 	//	faceOverlayFilterCaller.connect(webRtcCallee);
 	//	faceOverlayFilterCaller.connect(recorderCaller);
