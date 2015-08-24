@@ -87,7 +87,7 @@ public class UserSession {
 	}
 
 	public void sendMessage(JsonObject message) throws IOException {
-		log.debug("Sending message from user '{}': {}", name, message);
+		log.debug("Enviando mensaje desde el ususario '{}': {}", name, message);
 		session.sendMessage(new TextMessage(message.toString()));
 	}
 
@@ -111,6 +111,7 @@ public class UserSession {
 			this.webRtcEndpoint.addIceCandidate(e);
 		} else {
 			candidateList.add(e);
+			
 		}
 
 		if (this.playingWebRtcEndpoint != null) {
