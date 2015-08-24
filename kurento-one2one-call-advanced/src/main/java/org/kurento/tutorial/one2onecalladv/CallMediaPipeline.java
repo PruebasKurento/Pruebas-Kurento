@@ -73,12 +73,12 @@ public class CallMediaPipeline {
 				
 		// Connections
 		webRtcCaller.connect(faceOverlayFilterCaller);
-		faceOverlayFilterCaller.connect(webRtcCallee);
-		faceOverlayFilterCaller.connect(recorderCaller);
+	//	faceOverlayFilterCaller.connect(webRtcCallee);
+	//	faceOverlayFilterCaller.connect(recorderCaller);
 
 		webRtcCallee.connect(faceOverlayFilterCallee);
-		faceOverlayFilterCallee.connect(webRtcCaller);
-		faceOverlayFilterCallee.connect(recorderCallee);
+	//	faceOverlayFilterCallee.connect(webRtcCaller);
+	//	faceOverlayFilterCallee.connect(recorderCallee);
 	}
 
 	public void record() {
