@@ -37,7 +37,7 @@ public class CallMediaPipeline {
 	//public static final String RECORDING_PATH = "file:///tmp/"
 	//		+ df.format(new Date()) + "-";
 			
-	public static final String RECORDING_PATH = "$HOME/videos_kurento"
+	public static final String RECORDING_PATH = "file:///videos_kurento"
 			+ df.format(new Date()) + "-";
 	public static final String RECORDING_EXT = ".webm";
 
