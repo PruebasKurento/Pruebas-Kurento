@@ -34,7 +34,10 @@ public class CallMediaPipeline {
 
 	private static final SimpleDateFormat df = new SimpleDateFormat(
 			"yyyy-MM-dd_HH-mm-ss-S");
-	public static final String RECORDING_PATH = "file:///tmp/"
+	//public static final String RECORDING_PATH = "file:///tmp/"
+	//		+ df.format(new Date()) + "-";
+			
+	public static final String RECORDING_PATH = "$HOME/videos_kurento"
 			+ df.format(new Date()) + "-";
 	public static final String RECORDING_EXT = ".webm";
 
