@@ -128,9 +128,7 @@ public class CallHandler extends TextWebSocketHandler {
 	private void call(UserSession caller, JsonObject jsonMessage)
 			throws IOException {
 		String to = jsonMessage.get("to").getAsString();
-		responseMsg = "El valor de 'to' es: " + to; //Prueba.
 		String from = jsonMessage.get("from").getAsString();
-		responseMsg = "El valor de 'from' es: " + from; //Prueba.
 		JsonObject response = new JsonObject();
 
 		if (registry.exists(to)) {
