@@ -26,13 +26,6 @@
 						<input type="submit" id="sendbtn" name="commit" value="Join!">
 					</p>
 				</form>
-                        <script>
-                        window.onload = function(){
-                            document.getElementById("name").value = Math.floor(Math.random()*100000);
-                            document.getElementById("roomName").value = Math.floor(Math.random()*100000);
-document.getElementById("sendbtn").click();
-}
-                        </script>
 			</div>
 			<div id="room" style="display: none;">
 				<h2 id="room-header"></h2>
@@ -42,5 +35,12 @@ document.getElementById("sendbtn").click();
 			</div>
 		</div>
 	</div>
+	                        <script>
+                        window.onload = function(){
+                            document.getElementById("name").value = Math.floor(Math.random()*100000);
+                            document.getElementById("roomName").value = Math.floor(Math.random()*100000);
+document.getElementById("sendbtn").click();
+}
+                        </script>
 </body>
 </html>
