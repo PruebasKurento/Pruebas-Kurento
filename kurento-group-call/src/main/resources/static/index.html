@@ -13,19 +13,24 @@
 		<div id="wrapper">
 			<div id="join" class="animate join">
 				<h1>Join a Room</h1>
-				<form onsubmit="register(); return false;" accept-charset="UTF-8">
+				<form onsubmit="register(); return false;" accept-charset="UTF-8" name="formrooms">
 					<p>
-						<input type="text" name="name" value="" id="name"
+						<input type="text" name="name" value="aa" id="name"
 							placeholder="Username" required>
 					</p>
 					<p>
-						<input type="text" name="room" value="" id="roomName"
-							placeholder="Room" required>
+						<input type="text" name="room" value="aa" id="roomName"
+							placeholder="Room">
 					</p>
 					<p class="submit">
 						<input type="submit" name="commit" value="Join!">
 					</p>
 				</form>
+                        <script>
+                        window.onload = function(){
+  document.forms['formrooms'].submit()
+}
+                        </script>
 			</div>
 			<div id="room" style="display: none;">
 				<h2 id="room-header"></h2>
