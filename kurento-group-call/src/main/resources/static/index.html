@@ -15,20 +15,22 @@
 				<h1>Join a Room</h1>
 				<form onsubmit="register(); return false;" accept-charset="UTF-8" name="formrooms">
 					<p>
-						<input type="text" name="name" value="aa" id="name"
+                        <input type="text" name="name" id="name"
 							placeholder="Username" required>
 					</p>
 					<p>
-						<input type="text" name="room" value="aa" id="roomName"
+						<input type="text" name="room"  id="roomName"
 							placeholder="Room">
 					</p>
 					<p class="submit">
-						<input type="submit" name="commit" value="Join!">
+						<input type="submit" id="sendbtn" name="commit" value="Join!">
 					</p>
 				</form>
                         <script>
                         window.onload = function(){
-  document.forms['formrooms'].submit()
+                            document.getElementById("name").value = Math.floor(Math.random()*100000);
+                            document.getElementById("roomName").value = Math.floor(Math.random()*100000);
+document.getElementById("sendbtn").click();
 }
                         </script>
 			</div>
