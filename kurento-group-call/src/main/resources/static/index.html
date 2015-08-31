@@ -9,17 +9,11 @@
 <script src="./js/kurento-utils.js"></script>
 
 </head>
-<body>
+<body onload="register(); return false;">
 	<div id="container">
 		<div id="wrapper">
-			<div id="join" class="animate join">
-				<h1>Join a Room</h1>
-	<script>
-                        register();
-                        return false;
-        </script>
-			</div>
-			<div id="room" style="display: none;">
+
+			<div id="room" style="display: block;">
 				<h2 id="room-header"></h2>
 				<div id="participants"></div>
 				<input type="button" id="button-leave" onmouseup="leaveRoom();"
