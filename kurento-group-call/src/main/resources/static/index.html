@@ -7,28 +7,27 @@
 <script src="./js/conferenceroom.js"></script>
 <script src="./js/participant.js"></script>
 <script src="./js/kurento-utils.js"></script>
-
 </head>
 <body>
 	<div id="container">
 		<div id="wrapper">
 			<div id="join" class="animate join">
 				<h1>Join a Room</h1>
-				<form onsubmit="register(); return false;" accept-charset="UTF-8">
+				<form onsubmit="register(); return false;" accept-charset="UTF-8" name="formrooms">
 					<p>
-						<input type="text" name="name" value="" id="name"
-							placeholder="Username">
+                        <input type="text" name="name" id="name"
+							placeholder="Username" required>
 					</p>
 					<p>
-						<input type="text" name="room" value="" id="roomName"
+						<input type="text" name="room"  id="roomName"
 							placeholder="Room">
 					</p>
 					<p class="submit">
-						<input type="submit" name="commit" value="Join!">
+						<input type="submit" id="sendbtn" name="commit" value="Join!">
 					</p>
 				</form>
 			</div>
-			<div id="room" style="display: block;">
+			<div id="room" style="display: none;">
 				<h2 id="room-header"></h2>
 				<div id="participants"></div>
 				<input type="button" id="button-leave" onmouseup="leaveRoom();"
@@ -36,18 +35,10 @@
 			</div>
 		</div>
 	</div>
-                        <script>
+	                        <script>
                         window.onload = function(){
-                        document.getElementById("name").value = Math.floor(Math.random()*100000);
-                        document.getElementById("roomName").value = Math.floor(Math.random()*100000);	
-  
-           	document.getElementById("sendbtn").click();
-           	document.getElementById("sendbtn").disabled = true;
-
-                        
-                        	
-                        }
-                       </script>
-                       
+document.getElementById("sendbtn").click();
+}
+                        </script>
 </body>
 </html>
