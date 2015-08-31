@@ -55,7 +55,7 @@ function register() {
 	name = Math.floor(Math.random()*100000);
 	
 	//var room = document.getElementById('roomName').value;
-	var room = 2;
+	var room = 3;
 
 	document.getElementById('room-header').innerText = 'ROOM ' + room;
 	document.getElementById('join').style.display = 'none';
