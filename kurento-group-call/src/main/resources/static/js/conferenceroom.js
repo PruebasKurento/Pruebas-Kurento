@@ -52,9 +52,10 @@ ws.onmessage = function(message) {
 }
 
 function register() {
-	name = document.getElementById('name').value;
-	var room = document.getElementById('roomName').value;
-	
+	//name = document.getElementById('name').value;
+	name= 1;
+	//var room = document.getElementById('roomName').value;
+	var room = 2;
 
 	document.getElementById('room-header').innerText = 'ROOM ' + room;
 	document.getElementById('join').style.display = 'none';
