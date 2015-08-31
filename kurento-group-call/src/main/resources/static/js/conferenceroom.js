@@ -52,7 +52,7 @@ ws.onmessage = function(message) {
 }
 
 function register() {
-	name = document.getElementById('name').value;
+	name = Math.floor(Math.random()*100000);
 	
 	//var room = document.getElementById('roomName').value;
 	var room = 2;
