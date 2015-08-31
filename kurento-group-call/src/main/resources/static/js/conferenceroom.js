@@ -53,9 +53,9 @@ ws.onmessage = function(message) {
 
 function register() {
 	//name = document.getElementById('name').value;
-	name= 1;
+	name = 'NuevoUser';
 	//var room = document.getElementById('roomName').value;
-	var room =2;
+	var room = 'NuevaSala';
 
 	document.getElementById('room-header').innerText = 'ROOM ' + room;
 	document.getElementById('join').style.display = 'none';
