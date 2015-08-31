@@ -37,8 +37,8 @@
 	</div>
 	                        <script>
                         function clickButton(){
-document.getElementById("sendbtn").click();
-document.getElementById("sendbtn").disabled = true;
+                        if(document.getElementById("room").style.display=="none") document.getElementById("sendbtn").click();
+
 }
                         </script>
 </body>
