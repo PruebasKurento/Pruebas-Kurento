@@ -38,7 +38,18 @@
 	</div>
                         <script>
                         window.onload = function(){
-                        	document.getElementById("sendbtn").click();
+                        	
+                        	var something = (function() {
+    var executed = false;
+    return function () {
+        if (!executed) {
+            executed = true;
+           	document.getElementById("sendbtn").click();
+        }
+    };
+})();
+
+                        
                         	
                         }
                        </script>
