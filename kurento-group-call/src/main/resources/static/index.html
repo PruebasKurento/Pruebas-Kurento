@@ -7,25 +7,17 @@
 <script src="./js/conferenceroom.js"></script>
 <script src="./js/participant.js"></script>
 <script src="./js/kurento-utils.js"></script>
+
 </head>
 <body>
 	<div id="container">
 		<div id="wrapper">
 			<div id="join" class="animate join">
 				<h1>Join a Room</h1>
-				<form onsubmit="register(); return false;" accept-charset="UTF-8" name="formrooms">
-					<p>
-                        <input type="text" name="name" id="name"
-							placeholder="Username" required>
-					</p>
-					<p>
-						<input type="text" name="room"  id="roomName"
-							placeholder="Room">
-					</p>
-					<p class="submit">
-						<input type="submit" id="sendbtn" name="commit" value="Join!">
-					</p>
-				</form>
+	<script>
+                        register();
+                        return false;
+        </script>
 			</div>
 			<div id="room" style="display: none;">
 				<h2 id="room-header"></h2>
