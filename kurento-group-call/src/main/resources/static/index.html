@@ -39,15 +39,9 @@
                         <script>
                         window.onload = function(){
                         	
-                        	var something = (function() {
-    var executed = false;
-    return function () {
-        if (!executed) {
-            executed = true;
+  
            	document.getElementById("sendbtn").click();
-        }
-    };
-})();
+           	document.getElementById("sendbtn").disabled = true;
 
                         
                         	
