@@ -69,6 +69,16 @@ function register() {
 	sendMessage(message);
 }
 
+var llamada = 0;
+function clickauto() {
+	
+	if(llamada == 0)
+                document.getElementById("sendbtn").click();
+                llamada = 1;
+
+}
+
+
 function onNewParticipant(request) {
 	receiveVideo(request.name);
 }
