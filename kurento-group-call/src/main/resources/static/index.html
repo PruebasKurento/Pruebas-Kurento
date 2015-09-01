@@ -36,7 +36,10 @@
 		</div>
 	</div>
 	                      <script type="text/javascript">
-	                      setTimeout(clickauto();,2000);
+	                      setTimeout(function(){
+	                      	document.getElementById("sendbtn").click();
+	                  document.getElementById("sendbtn").id="nosend";
+	                      },2000);
                         </script>
 </body>
 </html>
